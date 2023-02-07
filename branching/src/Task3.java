@@ -10,7 +10,6 @@ public class Task3 {
 
         int ruble = 20;
         int out;
-        int ostatok = 0;
 
         System.out.println("Банкомат имеет только купюры по 20р.");
 
@@ -34,10 +33,7 @@ public class Task3 {
                     System.out.println("Операция прошла успешно");
                     System.out.println("Остаток на счету: " + balance);
                 }
-
             }
-
         }
-        
     }
 }
