@@ -5,8 +5,9 @@ public class Task3 {
     public static void main(String[] args) {
 
         int balance = 997;
-        int cashout = 557;
+        int cashout = 560;
         int limit = 1500;
+
         int ruble = 20;
         int out;
         int ostatok = 0;
@@ -17,22 +18,26 @@ public class Task3 {
 
             System.out.println("Допустимая сумма для снятия не более 1500р.");
 
-        } else if (cashout <= limit) {
+        } else {
 
             if (cashout > balance) {
                 System.out.println("На вашем счету нет такой суммы.");
-            } else if (cashout <= balance) {
-
+            } else {
                 out = (cashout % ruble);
-                ostatok +=balance-(cashout-out);
-                System.out.println("Операция прошла успешно");
-                System.out.println("Остаток со списания: "+out);
-                System.out.println("Остаток на счету: "+ostatok);
+                if (out!=0){
 
+                    System.out.println("Нельзя снять такую сумму");
+
+                }
+                else {
+                    balance = balance - cashout;
+                    System.out.println("Операция прошла успешно");
+                    System.out.println("Остаток на счету: " + balance);
+                }
 
             }
 
         }
-        //System.out.println(ostatok); проверка на корректное присваивания
+        
     }
 }
