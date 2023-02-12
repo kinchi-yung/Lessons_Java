@@ -18,7 +18,7 @@ public class Task3 {
         mass1[9] = 19;
 
         int temporary;
-        
+
 
         for (int i = 0; i < mass1.length; i++) {
             for (int j = i + 1; j < mass1.length; j++){
