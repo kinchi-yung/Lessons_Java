@@ -22,9 +22,10 @@ public class Task2 {
 
         for (int i = 0; i<numbers.length; i++){
             numbersSummary += numbers[i] ;
-            average = (numbersSummary/numbers.length);
-
         }
+
+        average = (numbersSummary/numbers.length);
+
         System.out.println("Сумма всех чисел массива: "+numbersSummary);
         System.out.println("Среднее значение массива: "+average);
     }
