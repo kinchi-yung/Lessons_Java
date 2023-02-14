@@ -36,13 +36,23 @@ public class Task1 {
                 }
             }
         }
+                  // first try
+//        for (int e : array){
+//            if (e!=0){
+//                temp = e;
+//                temp = temp%2;
+//                if (temp==0)
+//                System.out.println("Число "+e+" чётное");
+//            } if (temp!=0){
+//                System.out.println("Число "+e+" не чётное");
+//            }
+//        }
+
+                   //corrected
         for (int e : array){
-            if (e!=0){
-                temp = e;
-                temp = temp%2;
-                if (temp==0)
+            if (e % 2 == 0){
                 System.out.println("Число "+e+" чётное");
-            } if (temp!=0){
+            } else{
                 System.out.println("Число "+e+" не чётное");
             }
         }
