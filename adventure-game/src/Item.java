@@ -10,14 +10,12 @@ public class Item {
         System.out.println("У предмета должно быть своё название и описание!");
     }
 
-    Item(String name, String description) {
+    Item(name, String description) {
 
         this.name = name;
         this.description = description;
-    }
+        }
 
-    private String roomName;
-    private String roomDesc;
 
     void rooms() {
 
@@ -32,5 +30,10 @@ public class Item {
         rooms();
 
     }
-
+    public void setName(String roomName){
+        name = roomName;
+    }
+    public void getName(){
+        return name;
+    }
 }
