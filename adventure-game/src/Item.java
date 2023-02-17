@@ -1,39 +1,38 @@
 
 
-
 public class Item {
     private String name;
     private String description;
-
+    private String roomName;
+    private String roomDesc;
 
     static void Item() {
         System.out.println("У предмета должно быть своё название и описание!");
     }
-
-    Item(name, String description) {
+    Item(String name, String description) {
 
         this.name = name;
         this.description = description;
-        }
-
-
+    }
     void rooms() {
-
+        System.out.println("Дайте название комнате");
     }
 
-    void rooms(String name, String description) {
-        this.roomName = name;
-        this.roomDesc = description;
+    void rooms(String roomname, String roomdescription) {
+        this.roomName = roomname;
+        this.roomDesc = roomdescription;
     }
 
     void rooms(String name) {
         rooms();
+        roomDesc = "";
+    }
 
-    }
-    public void setName(String roomName){
-        name = roomName;
-    }
-    public void getName(){
-        return name;
-    }
 }
+
+//public Item(String name, String description) { this.name = name; this.description = description; }
+//public Item(String name) { this(name, ""); }
+//public class Item { String name; String description;
+//    public Item(String name, String description) { this.name = name; this.description = description; }
+//
+//public Item(String name) { this(name, ""); } }
