@@ -12,14 +12,15 @@ public class Task3 {
         word.toLowerCase();
 
         for (int i = 0; i < word.length(); i++) {
-            for (int j = word.lastIndexOf(word); j > 0; j--) {
+            for (int j = (word); j > 0; j--) {
                 if (word.indexOf(i) == word.indexOf(j)) {
+
 
                     System.out.println("Ваше слово " + word + " палиндром");
 
                 } else if (word.indexOf(i) != word.indexOf(j)) {
                     System.out.println("Ваше слово " + word + " не палиндром");
-                    
+
                 }
 
             }
