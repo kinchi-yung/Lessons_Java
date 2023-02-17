@@ -2,8 +2,9 @@
 
 
 public class Bedroom {
-    private String name;
-    private String description;
+    private String name = "Спальня";
+    private String description = "";
+
     Item[] items = new Item[7];
 
     Item mirror = new Item("Зеркало", "Простое зеркальце на прикроватной тумбе");
