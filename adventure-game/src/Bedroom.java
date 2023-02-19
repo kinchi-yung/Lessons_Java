@@ -2,8 +2,7 @@
 
 
 public class Bedroom {
-    private String name = "Спальня";
-    private String description = "";
+   Item.Rooms Bedroom = new Item.Rooms("Спальня");
 
     public static void main(String[] args) {
         Item[] items = new Item[]{new Item("Зеркало", "Простое зеркальце на прикроватной тумбе"),
@@ -16,7 +15,9 @@ public class Bedroom {
         for (Item s : items) {
             System.out.println(s);
         }
-        System.out.println(items[1].name);
+        System.out.println(items[1].getName());
+        System.out.println(items[1].getDescription());
+        System.out.println();
     }
 }
 
