@@ -1,9 +1,3 @@
-
-
-
-
-
-
 public class LivingRoom {
     private String name = "Гостинная";
     private String description = "";

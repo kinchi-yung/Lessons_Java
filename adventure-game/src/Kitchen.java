@@ -1,9 +1,3 @@
-
-
-
-
-
-
 public class Kitchen {
     private String name = "Кухня";
     private String description = "";

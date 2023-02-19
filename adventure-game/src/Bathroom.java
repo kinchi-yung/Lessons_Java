@@ -1,9 +1,3 @@
-
-
-
-
-
-
 public class Bathroom {
     private String name = "Ванная комната";
     private String description = "";
