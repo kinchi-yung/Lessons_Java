@@ -1,6 +1,13 @@
 public class Kitchen {
-    private String name = "Кухня";
-    private String description = "";
+    private String roomName;
+    private String roomDescription;
+    public Kitchen(String roomName, String roomDescription) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+    }
+    public Kitchen(String roomName) {
+        this(roomName,"");
+    }
 
     Item[] items = new Item[] {new Item ("Холодильник","В нём хранится еда"),
             new Item ("Нож","Очень острый, режет даже материю"),

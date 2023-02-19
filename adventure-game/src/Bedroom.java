@@ -1,7 +1,15 @@
 public class Bedroom {
 
-    private String name = "Спальня";
-    private String description;
+    private String roomName;
+    private String roomDescription;
+
+    public Bedroom(String roomName, String roomDescription) {
+        this.roomName = roomName;
+        this.roomDescription = roomDescription;
+    }
+    public Bedroom(String roomName) {
+        this(roomName,"");
+    }
 
     Item[] items = new Item[]{new Item("Зеркало", "Простое зеркальце на прикроватной тумбе."),
             new Item("Кровать", "На ней я сплю. Большая и любимая."),
@@ -10,8 +18,5 @@ public class Bedroom {
             new Item("Дверь", "Выход и спальни."),
             new Item("Стол", "За ним я ем, работаю, отдыхаю."),
             new Item("Обычный смартфон", "Такой сейчас есть у каждого.")};
-        for(Item s :items)
-        {
-        System.out.println(s);
-    }
+
 }

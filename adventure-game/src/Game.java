@@ -18,10 +18,11 @@ public class Game {
         System.out.println(Kitchen.getRoomName());
         System.out.println(LivingRoom.getRoomName());
 
-        PlayerInv player1 = new PlayerInv();
+        Player player1 = new Player();
         System.out.println("Как к вам обращаться?");
         player1.name= keyboard.nextLine();
         System.out.println(player1.name);
+
     }
 }
 
