@@ -9,7 +9,6 @@ public class Item {
     }
 
     public Item(String name, String description) {
-
         this.name = name;
         this.description = description;
     }
@@ -40,19 +39,18 @@ public class Item {
             System.out.println("Дайте название комнате");
         }
 
+        public Rooms(String roomName) {
+            this.roomName=roomName;
+            roomDescription = "";
+        }
         public Rooms(String roomName, String roomDescription) {
             this.roomName = roomName;
             this.roomDescription = roomDescription;
         }
 
-        public Rooms(String roomName) {
-            new Rooms();
-            roomDescription = "";
-        }
-
         public void setRoomName(String roomName) {
             if (roomName.isEmpty()) {
-                System.out.println("У комнаты должно быть хотя бы имя");
+                new Rooms();
             } else {
                 this.roomName = roomName;
             }
