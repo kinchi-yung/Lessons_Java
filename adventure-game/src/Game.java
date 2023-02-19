@@ -10,9 +10,8 @@ public class Game {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        
-        System.out.println("Добро пожаловать в игру \"Late for work\", твоя цель - найти выход из дома");
 
+        System.out.println("Добро пожаловать в игру \"Late for work\", твоя цель - найти выход из дома");
 
         Player player1 = new Player();
         System.out.println("Как к вам обращаться?");
