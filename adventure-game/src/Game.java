@@ -26,7 +26,10 @@ public class Game {
         System.out.println("Как к вам обращаться?");
         player1.name = keyboard.nextLine();
         System.out.println(player1.name);
-        keyboard.close();
+//        keyboard.close(); //Почему после этой строки выдаёт ошибку?
+//        Я писал в методах сканнер чтобы он по необходимости подключался и отключался,
+//        но после закрытия ЗДЕСЬ дальше вообще не идёт.
+//        Как и в остальных местах
 
         while (true) {
             if (isGameFinished == true) {
@@ -50,7 +53,7 @@ public class Game {
         System.out.println("2. Показать меню.\n1. Перейти в другую комнату. \n0. Выход.");
         Scanner keyboard = new Scanner(System.in);
         action = keyboard.nextInt();
-        keyboard.close();
+//        keyboard.close();
         return action;
     }
 
@@ -61,7 +64,7 @@ public class Game {
                 "\n3. " + rooms[3].getRoomName());
         Scanner keyboard = new Scanner(System.in);
         roomN = keyboard.nextInt();
-        keyboard.close();
+//        keyboard.close();
         return roomN;
     }
 }

@@ -5,7 +5,7 @@ public class Player{
 
     public void setCurrentRoom(Room currentRoom) {
         this.currentRoom = currentRoom;
-        System.out.println("Вы перешли в комнату: "+currentRoom);
+        System.out.println("Вы перешли в комнату: "+currentRoom.getRoomName());
     }
 
     public void showItems(){
