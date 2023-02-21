@@ -12,4 +12,16 @@ public class LivingRoom extends Room {
             new Item ("Кресло","Большое и мягкое"),
             new Item ("Ковёр","Простой ковёр"),
             new Item ("Магический стол","Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе")};
+
+    @Override
+    public void printItems() {
+        if (items.length>0) {
+            for (Item s : items) {
+                System.out.println("Предметы в комнате "+getRoomName()+": "+s.getName());
+                return ;
+            }
+        }else {
+            super.printItems();
+        }
+    }
 }

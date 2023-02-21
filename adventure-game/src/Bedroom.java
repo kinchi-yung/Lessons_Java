@@ -16,4 +16,15 @@ public class Bedroom extends Room {
             new Item("Стол", "За ним я ем, работаю, отдыхаю."),
             new Item("Обычный смартфон", "Такой сейчас есть у каждого.")};
 
+    @Override
+    public void printItems() {
+        if (items.length > 0) {
+            for (Item s : items) {
+                System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
+                return;
+            }
+        } else {
+            super.printItems();
+        }
+    }
 }

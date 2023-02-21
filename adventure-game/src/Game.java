@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Game {
-    static boolean isGameFinished;
+    static boolean isGameFinished = false;
 
 //    Room bedroom = new Bedroom("Спальня");
 //    Room kitchen = new Kitchen("Поедальня");
@@ -29,18 +29,19 @@ public class Game {
         keyboard.close();
 
         while (true) {
-            if (isGameFinished==true){
+            if (isGameFinished == true) {
                 System.out.println("Поздравляем, вы победили!");
                 break;
-            }
-            showMenu();
-            if (action == 0) {
-                break;
-            }else if(action==1){
-                showRooms();
-                player1.setCurrentRoom(rooms[roomN]);
-            } else if (action==2) {
-                player1.showItems();
+            } else {
+                showMenu();
+                if (action == 0) {
+                    break;
+                } else if (action == 1) {
+                    showRooms();
+                    player1.setCurrentRoom(rooms[roomN]);
+                } else if (action == 2) {
+                    player1.showItems();
+                }
             }
         }
     }

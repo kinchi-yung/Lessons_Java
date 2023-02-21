@@ -17,12 +17,13 @@ public class Kitchen extends Room {
 
     @Override
     public void printItems() {
-            super.printItems();
         if (items.length>0) {
             for (Item s : items) {
                 System.out.println("Предметы в комнате "+getRoomName()+": "+s.getName());
                 return ;
             }
+        }else {
+            super.printItems();
         }
     }
 }
