@@ -13,7 +13,7 @@ public class Game {
             new Bathroom("Умывальня"),
             new LivingRoom("Гостевальня", "Большная")};
 
-    
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
@@ -24,6 +24,28 @@ public class Game {
         player1.name = keyboard.nextLine();
         System.out.println(player1.name);
 
+        keyboard.close();
+    }
+
+    public int showMenu() {
+        int action;
+        System.out.println("1. Перейти в другую комнату; \n0. Выход.");
+        Scanner keyboard = new Scanner(System.in);
+        action = keyboard.nextInt();
+        keyboard.close();
+        return action;
+    }
+    
+    public int showRooms(){
+        int roomN;
+        System.out.println("0. "+rooms[0].getRoomName()+
+                "\n1. "+rooms[1].getRoomName()+
+                "\n2. "+rooms[2].getRoomName()+
+                "\n3. "+rooms[3].getRoomName());
+        Scanner keyboard = new Scanner(System.in);
+        roomN = keyboard.nextInt();
+        keyboard.close();
+        return roomN;
     }
 }
 
