@@ -7,4 +7,10 @@ public class Player{
         this.currentRoom = currentRoom;
         System.out.println("Вы перешли в комнату: "+currentRoom);
     }
+
+    public void showItems(){
+        for(Item s:inventory){
+            System.out.println(s);
+        }
+    }
 }

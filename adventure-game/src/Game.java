@@ -29,18 +29,24 @@ public class Game {
         keyboard.close();
 
         while (true) {
+            if (isGameFinished==true){
+                System.out.println("Поздравляем, вы победили!");
+                break;
+            }
             showMenu();
             if (action == 0) {
                 break;
             }else if(action==1){
                 showRooms();
                 player1.setCurrentRoom(rooms[roomN]);
+            } else if (action==2) {
+                player1.showItems();
             }
         }
     }
 
     public static int showMenu() {
-        System.out.println("1. Перейти в другую комнату; \n0. Выход.");
+        System.out.println("2. Показать меню.\n1. Перейти в другую комнату. \n0. Выход.");
         Scanner keyboard = new Scanner(System.in);
         action = keyboard.nextInt();
         keyboard.close();
