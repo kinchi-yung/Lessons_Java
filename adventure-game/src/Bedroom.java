@@ -1,11 +1,8 @@
-public class Bedroom {
-
-    private String roomName;
-    private String roomDescription;
+public class Bedroom extends Room {
 
     public Bedroom(String roomName, String roomDescription) {
-        this.roomName = roomName;
-        this.roomDescription = roomDescription;
+        setRoomName(roomName);
+        setRoomDescription(roomDescription);
     }
     public Bedroom(String roomName) {
         this(roomName,"");

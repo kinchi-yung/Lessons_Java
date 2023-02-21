@@ -3,11 +3,17 @@ import java.util.Scanner;
 public class Game {
     static boolean isGameFinished;
 
-    Bedroom bedroom = new Bedroom("Спальня");
-    Kitchen kitchen = new Kitchen("Поедальня");
-    Bathroom bathroom = new Bathroom("Умывальня");
-    LivingRoom livingRoom = new LivingRoom("Гостевальня","Большная");
+//    Room bedroom = new Bedroom("Спальня");
+//    Room kitchen = new Kitchen("Поедальня");
+//    Room bathroom = new Bathroom("Умывальня");
+//    Room livingRoom = new LivingRoom("Гостевальня", "Большная");
 
+    Room[] rooms = new Room[]{new Bedroom("Спальня"),
+            new Kitchen("Поедальня"),
+            new Bathroom("Умывальня"),
+            new LivingRoom("Гостевальня", "Большная")};
+
+    
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
@@ -15,7 +21,7 @@ public class Game {
 
         Player player1 = new Player();
         System.out.println("Как к вам обращаться?");
-        player1.name= keyboard.nextLine();
+        player1.name = keyboard.nextLine();
         System.out.println(player1.name);
 
     }
