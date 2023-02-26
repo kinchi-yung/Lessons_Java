@@ -20,9 +20,16 @@ public class Player {
     public void interact() {
         currentRoom.printItems();
         int i = sc.nextInt();
-        if (i>-1 || Item[i] = Collectible){
-            System.out.println("Хотите положить предмет в инвентарь или использовать?");
+        if (i>-1 || items[i] instanceof Collectible){
+            System.out.println("Хотите положить предмет в инвентарь или использовать?" +
+                    "\n1.Положить в инвентарь" +
+                    "\n2.Использовать");
+            int temp = sc.nextInt();
+            if (temp == 1){
+                inventory += items[i];
+            }else if (temp==2){
 
+            }
         }
     }
 }

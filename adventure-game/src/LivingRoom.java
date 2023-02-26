@@ -1,25 +1,22 @@
 public class LivingRoom extends Room {
 
-    Item[] items = new Item[4];
+   // Item[] abstractitems = new Item[4];
 
     public LivingRoom(String roomName, String roomDescription) {
         setRoomName(roomName);
         setRoomDescription(roomDescription);
-        Item[] items = new Item[]{new Item("Люстра", "Высоко висит"),
-                new Item("Кресло", "Большое и мягкое"),
-                new Item("Ковёр", "Простой ковёр"),
-                new Item("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе")};
 
     }
 
     public LivingRoom(String roomName) {
         this(roomName, "");
-        Item[] items = new Item[]{new Item("Люстра", "Высоко висит"),
-                new Item("Кресло", "Большое и мягкое"),
-                new Item("Ковёр", "Простой ковёр"),
-                new Item("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе")};
 
     }
+
+//    items[0]=new Item lystra("Люстра", "Высоко висит");
+//            new Item("Кресло", "Большое и мягкое"),
+//            new Item("Ковёр", "Простой ковёр"),
+//            new Item("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе")};
 
 
     @Override
