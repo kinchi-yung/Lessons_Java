@@ -59,6 +59,7 @@ public class Kitchen extends Room {
                 return;
             }
         } else {
+            System.out.println("В комнате нет вещей");
         }
     }
 }

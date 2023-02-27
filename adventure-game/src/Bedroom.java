@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Bedroom extends Room {
 
     public Bedroom(String roomName, String roomDescription) {
@@ -59,6 +61,8 @@ public class Bedroom extends Room {
       new IPhone("Обычный смартфон", "Такой сейчас есть у каждого."),
       new Shkaf("Шкаф", "Шкаф в котором храню одежду.")
     };
+
+    //Item items =  BedRoomItems[3];
 
 
     @Override
