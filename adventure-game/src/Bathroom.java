@@ -42,7 +42,7 @@ public class Bathroom extends Room {
         }
     }
 
-    Item[] BathRoomItems = new Item[]{
+    Item[] items = new Item[]{
             new Lotok ("Лоток", "Находится рядом с человеческим"),
             new Towel ("Полотенце", "Простое полотенце"),
             new ToiletPaper ("Туалетная бумага", "Поднимет боевой дух кота"),
@@ -52,8 +52,8 @@ public class Bathroom extends Room {
     @Override
     public void printItems() {
 
-        if (BathRoomItems.length > 0) {
-            for (Item s : BathRoomItems) {
+        if (items.length > 0) {
+            for (Item s : items) {
                 System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
                 return;
             }

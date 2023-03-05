@@ -41,7 +41,7 @@ public class Kitchen extends Room {
     }
 
 
-    Item[] KitchenRoomItems = new Item[]{
+    Item[] items = new Item[]{
         new SharpKnife("Нож", "Очень острый, режет даже материю"),
         new Dishes("Кострюли", "Набор поварских кострюль для готовки"),
         new CrowBar("Монтировка", "Просто стоит за холодильком"),
@@ -53,8 +53,8 @@ public class Kitchen extends Room {
     @Override
     public void printItems() {
 
-        if (KitchenRoomItems.length > 0) {
-            for (Item s : KitchenRoomItems) {
+        if (items.length > 0) {
+            for (Item s : items) {
                 System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
                 return;
             }

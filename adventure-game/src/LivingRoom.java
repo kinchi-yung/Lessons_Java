@@ -9,27 +9,6 @@ public class LivingRoom extends Room {
         this(roomName, "");
     }
 
-    //    public class itemsLivingRoomC extends Item implements Collectible {
-//        public itemsLivingRoomC(String name, String description) {
-//            super(name, description);
-//        }
-//        Item kover = new itemsLivingRoomC("Ковёр", "Простой ковёр");
-//    }
-//
-//    public class itemsLivingRoomU extends Item implements Useful {
-//        public itemsLivingRoomU(String name, String description) {
-//            super(name, description);
-//        }
-//        Item lystra = new itemsLivingRoomU("Люстра", "Высоко висит");
-//        Item kreslo = new itemsLivingRoomU("Кресло", "Большое и мягкое");
-//        Item magicTable = new itemsLivingRoomU("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе");
-//
-//
-//        @Override
-//        public void use() {
-//
-//        }
-//    }
     public class Kover extends Item implements Collectible {
         public Kover(String name, String description) {
             super(name, description);
@@ -71,7 +50,7 @@ public class LivingRoom extends Room {
     }
 
 
-    Item[] LivingRoomItems = new Item[]{
+    Item[] items = new Item[]{
             new MagicTable("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе"),
             new Kreslo("Кресло", "Большое и мягкое"),
             new Lystra("Люстра", "Высоко висит"),
@@ -82,8 +61,8 @@ public class LivingRoom extends Room {
     @Override
     public void printItems() {
 
-        if (LivingRoomItems.length > 0) {
-            for (Item s : LivingRoomItems) {
+        if (items.length > 0) {
+            for (Item s : items) {
                 System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
                 return;
             }

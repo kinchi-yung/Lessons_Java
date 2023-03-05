@@ -2,6 +2,7 @@ public abstract class Room {
     private String roomName;
     private String roomDescription;
 
+
     public String getRoomName() {
         return roomName;
     }
@@ -19,4 +20,5 @@ public abstract class Room {
     }
 
     public abstract void printItems();
+
 }
