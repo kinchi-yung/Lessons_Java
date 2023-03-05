@@ -22,7 +22,7 @@ public class Task3 {
         String word = keyboard.next();
         word.toLowerCase();
 
-                  //ВАРИАНТ 1
+        //ВАРИАНТ 1
 //        if (isPalindrome(word)==true){
 //            System.out.println("Ваше слово палиндром " +word);
 //        }else{
@@ -30,30 +30,23 @@ public class Task3 {
 //        }
 
 
-                    //ВАРИАНТ 2
-        for (int i = 0; i < (word.length()/2); i++) {
-            for (int j = word.lastIndexOf(word); j > (word.length()/2); j--) {
-                do {
-                    System.out.println("Ваше слово " + word + " палиндром");
-                    if (word.indexOf(i) == word.indexOf(j)) {
-                        continue;
-                    }
+        //ВАРИАНТ 2
+        for (int i = 0; i < (word.length() / 2); i++) {
+            for (int j = word.lastIndexOf(word); j > (word.length() / 2); j--) {
+                if (word.indexOf(i) == word.indexOf(j)) {
+                    System.out.println("Ваше слово \"" + word + "\" палиндром");
+                    break;
+                } else if (word.indexOf(i) != word.indexOf(j)) {
+                    System.out.println("Ваше слово \"" + word + "\" не палиндром");
+                    break;
+                }
 
-//                if (word.indexOf(i) == word.indexOf(j)) {
-//
-//                    System.out.println("Ваше слово " + word + " палиндром");
-//                    break;
-//                } else if (word.indexOf(i) != word.indexOf(j)) {
-//                    System.out.println("Ваше слово \"" + word + "\" не палиндром");
-//                    break;
-//                }
-
-                } while (word.indexOf(i) != word.indexOf(j));
             }
         }
 
 
-                  //ВАРИАНТ 3
+
+        //ВАРИАНТ 3
 //        StringBuffer buffer = new StringBuffer(word);
 //        buffer.reverse();
 //        String data = buffer.toString();
