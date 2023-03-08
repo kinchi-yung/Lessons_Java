@@ -11,11 +11,16 @@ public class Task4 {
         String devidee = keyboard.next();
 
         int i=0;
+        int count=0;
         String[] temp = sent.split(" ");
 
-        for (String e = sent; devidee.equalsIgnoreCase(e); i++){
-
+        for (String e = temp[i]; i< temp.length ; i++){
+            if (devidee.equalsIgnoreCase(e)){
+                count=count+1;
+            }else{
+                break;
+            }
         }
-        System.out.println("Кол-во вхождений определенного слова в предложение: "+i);
+        System.out.println("Кол-во вхождений определенного слова в предложение: "+count);
     }
 }

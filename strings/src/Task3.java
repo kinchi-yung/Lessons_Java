@@ -40,7 +40,6 @@ public class Task3 {
                     System.out.println("Ваше слово \"" + word + "\" не палиндром");
                     break;
                 }
-
             }
         }
 
