@@ -8,19 +8,20 @@ public class Task4 {
         String sent = keyboard.nextLine();
 
         System.out.println("Какое слово нужно посчитать в предложении?");
-        String devidee = keyboard.next();
+        String wordToCount = keyboard.next();
 
-        int i=0;
         int count=0;
-        String[] temp = sent.split(" ");
 
-        for (String e = temp[i]; i< temp.length ; i++){
-            if (devidee.equalsIgnoreCase(e)){
-                count=count+1;
-            }else{
-                break;
+        String[] words = sent.split(" ");
+
+        for (String word : words) {
+            if (word.equalsIgnoreCase(wordToCount)) {
+                count++;
             }
         }
+
+        System.out.println("Слово \"" + wordToCount + "\" встречается в предложении " + count + " раз(а).");
+
         System.out.println("Кол-во вхождений определенного слова в предложение: "+count);
     }
 }

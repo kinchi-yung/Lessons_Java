@@ -22,7 +22,7 @@ public class Task3 {
         String word = keyboard.next();
         word.toLowerCase();
 
-        //ВАРИАНТ 1
+          //ВАРИАНТ 1
 //        if (isPalindrome(word)==true){
 //            System.out.println("Ваше слово палиндром " +word);
 //        }else{
