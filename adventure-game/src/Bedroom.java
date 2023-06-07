@@ -13,30 +13,23 @@ public class Bedroom extends Room {
 
     }
 
-//    public class IPhone extends Item implements Collectible{
-//        public IPhone(String name, String description) {
-//            super(name, description);
-//        }
-//    }
-//    public class Bed extends Item implements Useful{
-//        public Bed(String name, String description) {
-//            super(name, description);
-//        }
-//
-//        @Override
-//        public void use() {
-//        }
-//    }
-//    public class Mirror extends Item implements Useful{
-//        public Mirror(String name, String description) {
-//            super(name, description);
-//        }
-//
-//        @Override
-//        public void use() {
-//        }
-//    }
-    public class Table extends Item implements Useful{
+    public class IPhone extends Item implements Collectible {
+        public IPhone(String name, String description) {
+            super(name, description);
+        }
+    }
+
+    public class Bed extends Item implements Useful {
+        public Bed(String name, String description) {
+            super(name, description);
+        }
+
+        @Override
+        public void use() {
+        }
+    }
+
+    public class Table extends Item implements Useful {
         public Table(String name, String description) {
             super(name, description);
         }
@@ -45,26 +38,22 @@ public class Bedroom extends Room {
         public void use() {
         }
     }
-//    public class Shkaf extends Item implements Useful{
-//        public Shkaf(String name, String description) {
-//            super(name, description);
-//        }
-//
-//        @Override
-//        public void use() {
-//        }
-//    }
-//    Item[] items = new Item[]{
-//      new Table("Стол", "За ним я ем, работаю, отдыхаю."),
-//      new Mirror("Зеркало", "Простое зеркальце на прикроватной тумбе.") ,
-//      new Bed("Кровать", "На ней я сплю. Большая и любимая."),
-//      new IPhone("Обычный смартфон", "Такой сейчас есть у каждого."),
-//      new Shkaf("Шкаф", "Шкаф в котором храню одежду.")
-//    };
 
-    Item.Array arr = new Item.Array(5);
+    public class Shkaf extends Item implements Collectible {
+        public Shkaf(String name, String description) {
+            super(name, description);
+        }
+    }
 
-    Item table = new Table("f","f");
+    private Item[] items;
+
+    public Bedroom() {
+        items = new Item[4];
+        items[0] = new IPhone ("Простой смартфон","Такой есть у каждого");
+        items[1] = new Bed ("Кровать","");
+        items[2] = new Table ("Стол","");
+        items[3] = new Shkaf ("Шкаф","");
+    }
 
 
     @Override

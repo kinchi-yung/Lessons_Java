@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Player {
     String name;
     Item[] inventory = new Item[10];
-//    Item[] roomItems = new Item[4];
-//    roomItems[0] = ;
+
     Room currentRoom;
     Scanner sc = new Scanner(System.in);
 

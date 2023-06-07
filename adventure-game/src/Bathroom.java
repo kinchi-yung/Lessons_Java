@@ -42,12 +42,15 @@ public class Bathroom extends Room {
         }
     }
 
-    Item[] items = new Item[]{
-            new Lotok ("Лоток", "Находится рядом с человеческим"),
-            new Towel ("Полотенце", "Простое полотенце"),
-            new ToiletPaper ("Туалетная бумага", "Поднимет боевой дух кота"),
-            new KremHair ("Средство для укладки волос", "Таким пользуются для придания нужной формы причёске")
-    };
+    private Item[] items;
+    public Bathroom(){
+        items = new Item[4];
+        items[0] = new ToiletPaper ("Туалетная бумага","");
+        items[1] = new Towel ("Полотенце","");
+        items[2] = new Lotok ("Туалет для кота","с мягким песком");
+        items[3] = new KremHair ("Крем для волос","");
+
+    }
 
     @Override
     public void printItems() {

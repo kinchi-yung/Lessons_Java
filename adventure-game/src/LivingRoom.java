@@ -13,14 +13,12 @@ public class LivingRoom extends Room {
         public Kover(String name, String description) {
             super(name, description);
         }
-        //Item kover = new Kover("Ковёр", "Простой ковёр");
     }
 
     public class Lystra extends Item implements Useful {
         public Lystra(String name, String description) {
             super(name, description);
         }
-        //Item lystra = new Lystra("Люстра", "Высоко висит");
 
         @Override
         public void use() {
@@ -31,7 +29,6 @@ public class LivingRoom extends Room {
         public Kreslo(String name, String description) {
             super(name, description);
         }
-        //Item kreslo = new Kreslo("Кресло", "Большое и мягкое");
 
         @Override
         public void use() {
@@ -42,20 +39,22 @@ public class LivingRoom extends Room {
         public MagicTable(String name, String description) {
             super(name, description);
         }
-        //Item magicTable = new MagicTable("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе");
 
         @Override
         public void use() {
         }
     }
 
+    private Item[] items;
 
-    Item[] items = new Item[]{
-            new MagicTable("Магический стол", "Стол в углу комнаты в алой раскраске, возможно владелец немного не в себе"),
-            new Kreslo("Кресло", "Большое и мягкое"),
-            new Lystra("Люстра", "Высоко висит"),
-            new Kover("Ковёр", "Простой ковёр")
-    };
+    public LivingRoom() {
+        items = new Item[4];
+        items[0] = new Kover ("Ковёр","");
+        items[1] = new Lystra ("Люстра","");
+        items[2] = new Kreslo ("Кресло","");
+        items[3] = new MagicTable ("Стол загадка","");
+
+    }
 
 
     @Override

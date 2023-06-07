@@ -3,6 +3,8 @@ public abstract class Room {
     private String roomDescription;
 
     Item[] items;
+    private Room currentRoom;
+
     public void addItems(Object item, int index){
         items[index] = (Item) item;
     }
@@ -23,5 +25,10 @@ public abstract class Room {
     }
 
     public abstract void printItems();
-
+    
+    public void setCurrentRoom(Room currentRoom) {
+        this.currentRoom = currentRoom;
+        System.out.println("Вы перешли в комнату: " + currentRoom.getRoomName());
+    }
 }
+    

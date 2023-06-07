@@ -7,6 +7,7 @@ public class Game {
             new Kitchen("Поедальня"),
             new Bathroom("Умывальня"),
             new LivingRoom("Гостевальня", "Большная")};
+    static Room kitchen = new Kitchen("fff");
 
     public static void main(String[] args) {
 
@@ -34,6 +35,14 @@ public class Game {
                 } else if (action == 1) {
                     roomN = showRooms();
                     player1.setCurrentRoom(rooms[roomN]);
+                    switch (roomN){
+                        case 0:
+                        case 1: {
+                            kitchen.printItems();
+                        }
+                        case 2:
+                        case 3:
+                    }
                 } else if (action == 2) {
                     player1.showItems();
                 }else if (action == 3){
@@ -72,7 +81,7 @@ public class Game {
         int roomN = keyboard.nextInt();
         return roomN;
 
-//        switch(rooms[i]){
+//        switch(){
 //            case (0) ->{
 //
 //            }
