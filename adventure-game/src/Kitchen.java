@@ -37,13 +37,17 @@ public class Kitchen extends Room {
         }
     }
 
-    Item fridge = new Fridge ("Холодильник","Вместительный");
+    //Item fridge = new Fridge ("Холодильник","Вместительный");
 
-    Item[] items = new Item[4];
-    items[0] = fridge;
-//    items[1] = new ("","");
-//    items[2] = new ("","");
-//    items[3] = new ("","");
+    private Item[] items;
+    public Kitchen() {
+        items = new Item[4]; // задаем размер массива размером 4
+        items[0] = new Fridge("Холодильник", "Вместительный");
+        items[1] = new Dishes("Посуда", "");
+        items[2] = new SharpKnife("Нож", "");
+        items[3] = new CrowBar("Ломик", "" );
+    }
+
     @Override
     public void addItems(Object item, int index) {
         super.addItems(item, index);
@@ -51,13 +55,12 @@ public class Kitchen extends Room {
 
 
 
-
     @Override
     public void printItems() {
 
         if (items.length > 0) {
-            for (Item s : items) {
-                System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
+            for (Item item : items) {
+                System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());
                 return;
             }
         } else {
