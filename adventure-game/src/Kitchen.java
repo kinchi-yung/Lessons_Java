@@ -27,26 +27,28 @@ public class Kitchen extends Room {
 
         @Override
         public void use() {
+            System.out.println("Открыв холодильник ты плотно покушал и решил что работа подождёт уснув на диване.");
         }
     }
 
-    public class Dishes extends Item implements Useful {
+    public class Dishes extends Item implements Collectible {
         public Dishes(String name, String description) {
             super(name, description);
         }
-
-        @Override
-        public void use() {
-        }
     }
 
+    Item fridge = new Fridge ("Холодильник","Вместительный");
 
-    Item[] items = new Item[]{
-        new SharpKnife("Нож", "Очень острый, режет даже материю"),
-        new Dishes("Кострюли", "Набор поварских кострюль для готовки"),
-        new CrowBar("Монтировка", "Просто стоит за холодильком"),
-        new Fridge("Холодильник", "В нём хранится еда")
-    };
+    Item[] items = new Item[4];
+    items[0] = fridge;
+//    items[1] = new ("","");
+//    items[2] = new ("","");
+//    items[3] = new ("","");
+    @Override
+    public void addItems(Object item, int index) {
+        super.addItems(item, index);
+    }
+
 
 
 

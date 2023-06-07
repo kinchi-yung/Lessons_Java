@@ -43,7 +43,7 @@ public class Game {
 
 
     public static int showMenu() {
-        System.out.println("2. Показать меню.\n1. Перейти в другую комнату. \n0. Выход.");
+        System.out.println("2. Показать инвентарь.\n1. Перейти в другую комнату. \n0. Выход.");
         Scanner keyboard = new Scanner(System.in);
         int action = keyboard.nextInt();
         return action;

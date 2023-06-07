@@ -36,15 +36,15 @@ public class Bedroom extends Room {
 //        public void use() {
 //        }
 //    }
-//    public class Table extends Item implements Useful{
-//        public Table(String name, String description) {
-//            super(name, description);
-//        }
-//
-//        @Override
-//        public void use() {
-//        }
-//    }
+    public class Table extends Item implements Useful{
+        public Table(String name, String description) {
+            super(name, description);
+        }
+
+        @Override
+        public void use() {
+        }
+    }
 //    public class Shkaf extends Item implements Useful{
 //        public Shkaf(String name, String description) {
 //            super(name, description);
@@ -54,14 +54,17 @@ public class Bedroom extends Room {
 //        public void use() {
 //        }
 //    }
-    Item[] items = new Item[]{
-      new Table("Стол", "За ним я ем, работаю, отдыхаю."),
-      new Mirror("Зеркало", "Простое зеркальце на прикроватной тумбе.") ,
-      new Bed("Кровать", "На ней я сплю. Большая и любимая."),
-      new IPhone("Обычный смартфон", "Такой сейчас есть у каждого."),
-      new Shkaf("Шкаф", "Шкаф в котором храню одежду.")
-    };
+//    Item[] items = new Item[]{
+//      new Table("Стол", "За ним я ем, работаю, отдыхаю."),
+//      new Mirror("Зеркало", "Простое зеркальце на прикроватной тумбе.") ,
+//      new Bed("Кровать", "На ней я сплю. Большая и любимая."),
+//      new IPhone("Обычный смартфон", "Такой сейчас есть у каждого."),
+//      new Shkaf("Шкаф", "Шкаф в котором храню одежду.")
+//    };
 
+    Item.Array arr = new Item.Array(5);
+
+    Item table = new Table("f","f");
 
 
     @Override

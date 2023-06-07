@@ -1,15 +1,15 @@
 public abstract class Item {
     private String name;
     private String description;
-    public static Item[] items;
 
-   // public Item[] items = new Item[7];
+    private Item[] items;
 
 
     public Item(String name, String description) {
         this.name = name;
         this.description = description;
     }
+   // public abstract void use();
 
     public String getName() {
         return name;
@@ -19,10 +19,19 @@ public abstract class Item {
         return description;
     }
 
-//    Object[] itemsBedroom = new Object[7];
-//    Object[] itemsLivingroom = new Object[4];
-//    Object[] itemsBathroom = new Object[4];
-//    Object[] itemsKitchen = new Object[4];
 
+
+    public static class Array {
+        //private  Object[] objectArray;
+        private  Object[] objectArray;
+
+        public  Array(int size){
+            objectArray=new Object[size];
+        }
+
+        public void addObject(Object object, int index){
+            objectArray[index]=object;
+        }
+    }
 
 }

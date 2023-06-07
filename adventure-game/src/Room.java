@@ -2,7 +2,10 @@ public abstract class Room {
     private String roomName;
     private String roomDescription;
 
-
+    Item[] items;
+    public void addItems(Object item, int index){
+        items[index] = (Item) item;
+    }
     public String getRoomName() {
         return roomName;
     }
