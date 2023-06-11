@@ -36,12 +36,18 @@ public class Game {
                     roomN = showRooms();
                     player1.setCurrentRoom(rooms[roomN]);
                     switch (roomN){
-                        case 0:
-                        case 1: {
-                            kitchen.printItems();
+                        case 0:{
+                            rooms[0].printItems();
                         }
-                        case 2:
-                        case 3:
+                        case 1: {
+                            rooms[1].printItems();
+                        }
+                        case 2:{
+                            rooms[2].printItems();
+                        }
+                        case 3:{
+                            rooms[3].printItems();
+                        }
                     }
                 } else if (action == 2) {
                     player1.showItems();

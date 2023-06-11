@@ -31,19 +31,23 @@ public class Kitchen extends Room {
         }
     }
 
-    public class Dishes extends Item implements Collectible {
-        public Dishes(String name, String description) {
+    public class Window extends Item implements  Useful{
+        String text;
+        public Window(String name, String description, String text) {
             super(name, description);
+            this.text = text;
+        }
+        @Override
+        public void use() {
+            System.out.println(text);
         }
     }
 
-    //Item fridge = new Fridge ("Холодильник","Вместительный");
 
-    private Item[] items;
     public Kitchen() {
         items = new Item[4]; // задаем размер массива размером 4
         items[0] = new Fridge("Холодильник", "Вместительный");
-        items[1] = new Dishes("Посуда", "");
+        items[1] = new Window("Окно", "","Можно вылезьти");
         items[2] = new SharpKnife("Нож", "");
         items[3] = new CrowBar("Ломик", "" );
     }
@@ -57,7 +61,6 @@ public class Kitchen extends Room {
 
     @Override
     public void printItems() {
-
         if (items.length > 0) {
             for (Item item : items) {
                 System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());

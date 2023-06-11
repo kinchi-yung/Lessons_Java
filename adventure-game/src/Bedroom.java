@@ -39,29 +39,33 @@ public class Bedroom extends Room {
         }
     }
 
-    public class Shkaf extends Item implements Collectible {
-        public Shkaf(String name, String description) {
+    public class Furniture extends Item implements  Useful{
+        String text;
+        public Furniture(String name, String description, String text) {
             super(name, description);
+            this.text = text;
+        }
+        @Override
+        public void use() {
+            System.out.println(text);
         }
     }
 
-    private Item[] items;
 
     public Bedroom() {
         items = new Item[4];
         items[0] = new IPhone ("Простой смартфон","Такой есть у каждого");
         items[1] = new Bed ("Кровать","");
         items[2] = new Table ("Стол","");
-        items[3] = new Shkaf ("Шкаф","");
+        items[3] = new Furniture ("Шкаф","Разная мебель","Может помочь");
     }
 
 
     @Override
     public void printItems() {
-
         if (items.length > 0) {
-            for (Item s : items) {
-                System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
+            for (Item item : items) {
+                System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());
                 return;
             }
         } else {
