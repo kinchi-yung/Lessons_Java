@@ -3,7 +3,7 @@ public class Kitchen extends Room {
         setRoomName(roomName);
         setRoomDescription(roomDescription);
         items = new Item[4]; // задаем размер массива размером 4
-        items[0] = new Fridge("Холодильник", "Вместительный");
+        items[0] = new Fridge("Холодильник", " Вместительный");
         items[1] = new Window("Окно", "","Можно вылезьти");
         items[2] = new SharpKnife("Нож", "");
         items[3] = new CrowBar("Ломик", "" );
@@ -11,8 +11,8 @@ public class Kitchen extends Room {
 
     public Kitchen(String roomName) {
         this(roomName, "");
-        items = new Item[4]; // задаем размер массива размером 4
-        items[0] = new Fridge("Холодильник", "Вместительный");
+        items = new Item[4];
+        items[0] = new Fridge("Холодильник", " Вместительный");
         items[1] = new Window("Окно", "","Можно вылезьти");
         items[2] = new SharpKnife("Нож", "");
         items[3] = new CrowBar("Ломик", "" );

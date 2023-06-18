@@ -38,15 +38,19 @@ public class Game {
                     switch (roomN){
                         case 0:{
                             rooms[0].printItems();
+                            break;
                         }
                         case 1: {
                             rooms[1].printItems();
+                            break;
                         }
                         case 2:{
                             rooms[2].printItems();
+                            break;
                         }
                         case 3:{
                             rooms[3].printItems();
+                            break;
                         }
                     }
                 } else if (action == 2) {
