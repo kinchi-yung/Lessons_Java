@@ -5,9 +5,9 @@ public abstract class Room {
     Item[] items;
     private Room currentRoom;
 
-    public void addItems(Object item, int index){
-        items[index] = (Item) item;
-    }
+//    public void addItems(Object item, int index){
+//        items[index] = (Item) item;
+//    }
     public String getRoomName() {
         return roomName;
     }
@@ -26,9 +26,9 @@ public abstract class Room {
 
     public abstract void printItems();
     
-    public void setCurrentRoom(Room currentRoom) {
-        this.currentRoom = currentRoom;
-        System.out.println("Вы перешли в комнату: " + currentRoom.getRoomName());
-    }
+//    public void setCurrentRoom(Room currentRoom) {
+//        this.currentRoom = currentRoom;
+//        System.out.println("Вы перешли в комнату: " + currentRoom.getRoomName());
+//    }
 }
     

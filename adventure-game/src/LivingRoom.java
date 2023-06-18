@@ -1,12 +1,22 @@
 public class LivingRoom extends Room {
-
     public LivingRoom(String roomName, String roomDescription) {
         setRoomName(roomName);
         setRoomDescription(roomDescription);
+            items = new Item[4];
+            items[0] = new Kover ("Ковёр","");
+            items[1] = new Lystra ("Люстра","");
+            items[2] = new Key ("Старинный ключ","","Открывает двери");
+            items[3] = new MagicTable ("Стол загадка","");
     }
 
     public LivingRoom(String roomName) {
         this(roomName, "");
+        items = new Item[4];
+        items[0] = new Kover ("Ковёр","");
+        items[1] = new Lystra ("Люстра","");
+        items[2] = new Key ("Старинный ключ","","Открывает двери");
+        items[3] = new MagicTable ("Стол загадка","");
+
     }
 
     public class Kover extends Item implements Collectible {
@@ -52,21 +62,13 @@ public class LivingRoom extends Room {
         }
     }
 
-    public LivingRoom() {
-        items = new Item[4];
-        items[0] = new Kover ("Ковёр","");
-        items[1] = new Lystra ("Люстра","");
-        items[2] = new Key ("Старинный ключ","","Открывает двери");
-        items[3] = new MagicTable ("Стол загадка","");
-    }
-
 
     @Override
     public void printItems() {
         if (items.length > 0) {
+            System.out.println("Предметы в комнате "+ getRoomName() + ": ");
             for (Item item : items) {
-                System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());
-                return;
+                System.out.println(item.getName()+item.getDescription());
             }
         } else {
             System.out.println("В комнате нет вещей");

@@ -2,12 +2,21 @@ public class Bathroom extends Room {
     public Bathroom(String roomName, String roomDescription) {
         setRoomName(roomName);
         setRoomDescription(roomDescription);
+        items = new Item[4];
+        items[0] = new ToiletPaper("Туалетная бумага", "");
+        items[1] = new Towel("Полотенце", "");
+        items[2] = new Note("Стикер на стекле", "","Напоминание про ключи");
+        items[3] = new KremHair("Крем для волос", "");
 
     }
 
     public Bathroom(String roomName) {
         this(roomName, "");
-
+        items = new Item[4];
+        items[0] = new ToiletPaper("Туалетная бумага", "");
+        items[1] = new Towel("Полотенце", "");
+        items[2] = new Note("Стикер на стекле", "","Напоминание про ключи");
+        items[3] = new KremHair("Крем для волос", "");
     }
 
     public class ToiletPaper extends Item implements Collectible {
@@ -48,20 +57,13 @@ public class Bathroom extends Room {
         }
     }
 
-    public Bathroom() {
-        items = new Item[4];
-        items[0] = new ToiletPaper("Туалетная бумага", "");
-        items[1] = new Towel("Полотенце", "");
-        items[2] = new Note("Стикер на стекле", "","Напоминание про ключи");
-        items[3] = new KremHair("Крем для волос", "");
-    }
 
     @Override
     public void printItems() {
         if (items.length > 0) {
+            System.out.println("Предметы в комнате "+ getRoomName() + ": ");
             for (Item item : items) {
-                System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());
-                return;
+                System.out.println(item.getName()+item.getDescription());
             }
         } else {
             System.out.println("В комнате нет вещей");

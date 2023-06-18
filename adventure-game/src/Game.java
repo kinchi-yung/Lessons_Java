@@ -7,7 +7,7 @@ public class Game {
             new Kitchen("Поедальня"),
             new Bathroom("Умывальня"),
             new LivingRoom("Гостевальня", "Большная")};
-    static Room kitchen = new Kitchen("fff");
+    //static Room kitchen = new Kitchen("fff");
 
     public static void main(String[] args) {
 

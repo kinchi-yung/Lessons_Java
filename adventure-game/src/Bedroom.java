@@ -5,12 +5,20 @@ public class Bedroom extends Room {
     public Bedroom(String roomName, String roomDescription) {
         setRoomName(roomName);
         setRoomDescription(roomDescription);
-
+        items = new Item[4];
+        items[0] = new IPhone ("Простой смартфон","Такой есть у каждого");
+        items[1] = new Bed ("Кровать","");
+        items[2] = new Table ("Стол","");
+        items[3] = new Furniture ("Шкаф","Разная мебель","Может помочь");
     }
 
     public Bedroom(String roomName) {
         this(roomName, "");
-
+        items = new Item[4];
+        items[0] = new IPhone ("Простой смартфон","Такой есть у каждого");
+        items[1] = new Bed ("Кровать","");
+        items[2] = new Table ("Стол","");
+        items[3] = new Furniture ("Шкаф","Разная мебель","Может помочь");
     }
 
     public class IPhone extends Item implements Collectible {
@@ -52,21 +60,12 @@ public class Bedroom extends Room {
     }
 
 
-    public Bedroom() {
-        items = new Item[4];
-        items[0] = new IPhone ("Простой смартфон","Такой есть у каждого");
-        items[1] = new Bed ("Кровать","");
-        items[2] = new Table ("Стол","");
-        items[3] = new Furniture ("Шкаф","Разная мебель","Может помочь");
-    }
-
-
     @Override
     public void printItems() {
         if (items.length > 0) {
+            System.out.println("Предметы в комнате "+ getRoomName() + ": ");
             for (Item item : items) {
-                System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());
-                return;
+                System.out.println(item.getName()+item.getDescription());
             }
         } else {
             System.out.println("В комнате нет вещей");

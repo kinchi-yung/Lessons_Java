@@ -2,7 +2,7 @@ public abstract class Item {
     private String name;
     private String description;
 
-    private Item[] items;
+    //private Item[] items;
 
 
     public Item(String name, String description) {
@@ -21,17 +21,17 @@ public abstract class Item {
 
 
 
-    public static class Array {
-        //private  Object[] objectArray;
-        private  Object[] objectArray;
-
-        public  Array(int size){
-            objectArray=new Object[size];
-        }
-
-        public void addObject(Object object, int index){
-            objectArray[index]=object;
-        }
-    }
+//    public static class Array {
+//        //private  Object[] objectArray;
+//        private  Object[] objectArray;
+//
+//        public  Array(int size){
+//            objectArray=new Object[size];
+//        }
+//
+//        public void addObject(Object object, int index){
+//            objectArray[index]=object;
+//        }
+//    }
 
 }

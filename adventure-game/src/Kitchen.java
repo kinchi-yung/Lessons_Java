@@ -2,10 +2,20 @@ public class Kitchen extends Room {
     public Kitchen(String roomName, String roomDescription) {
         setRoomName(roomName);
         setRoomDescription(roomDescription);
+        items = new Item[4]; // задаем размер массива размером 4
+        items[0] = new Fridge("Холодильник", "Вместительный");
+        items[1] = new Window("Окно", "","Можно вылезьти");
+        items[2] = new SharpKnife("Нож", "");
+        items[3] = new CrowBar("Ломик", "" );
     }
 
     public Kitchen(String roomName) {
         this(roomName, "");
+        items = new Item[4]; // задаем размер массива размером 4
+        items[0] = new Fridge("Холодильник", "Вместительный");
+        items[1] = new Window("Окно", "","Можно вылезьти");
+        items[2] = new SharpKnife("Нож", "");
+        items[3] = new CrowBar("Ломик", "" );
     }
 
     public class CrowBar extends Item implements Collectible {
@@ -43,28 +53,19 @@ public class Kitchen extends Room {
         }
     }
 
-
-    public Kitchen() {
-        items = new Item[4]; // задаем размер массива размером 4
-        items[0] = new Fridge("Холодильник", "Вместительный");
-        items[1] = new Window("Окно", "","Можно вылезьти");
-        items[2] = new SharpKnife("Нож", "");
-        items[3] = new CrowBar("Ломик", "" );
-    }
-
-    @Override
-    public void addItems(Object item, int index) {
-        super.addItems(item, index);
-    }
+//    @Override
+//    public void addItems(Object item, int index) {
+//        super.addItems(item, index);
+//    }
 
 
 
     @Override
     public void printItems() {
         if (items.length > 0) {
+            System.out.println("Предметы в комнате "+ getRoomName() + ": ");
             for (Item item : items) {
-                System.out.println("Предметы в комнате " + getRoomName() + ": " + item.getName()+item.getDescription());
-                return;
+                System.out.println(item.getName()+item.getDescription());
             }
         } else {
             System.out.println("В комнате нет вещей");
