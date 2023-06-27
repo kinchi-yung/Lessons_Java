@@ -25,13 +25,9 @@ public class LivingRoom extends Room {
         }
     }
 
-    public class Lystra extends Item implements Useful {
+    public class Lystra extends Item {
         public Lystra(String name, String description) {
             super(name, description);
-        }
-
-        @Override
-        public void use() {
         }
     }
 
@@ -41,14 +37,10 @@ public class LivingRoom extends Room {
             super(name, description);
             this.text = text;
         }
-        String keyWord = "Старинный ключ";
         @Override
         public void use() {
-//            if (keyWord.equals((getName(Key))){
-//                isGameFinished = true;
-//            }else{
-//                System.out.println("Ничего не произошло");
-//            }
+            System.out.println("Ключ открыл входную дверь и вы побежали на работу.");
+            Game.isGameFinished = true;
         }
     }
 
@@ -59,6 +51,8 @@ public class LivingRoom extends Room {
 
         @Override
         public void use() {
+            System.out.println("Зачаровав ковёр из гостинной вы полетели на нём на работу.");
+            Game.isGameFinished = true;
         }
     }
 

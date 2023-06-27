@@ -24,7 +24,7 @@ public class Kitchen extends Room {
         }
     }
 
-    public class SharpKnife extends Item implements Collectible {
+    public class SharpKnife extends Item {
         public SharpKnife(String name, String description) {
             super(name, description);
         }
@@ -38,6 +38,7 @@ public class Kitchen extends Room {
         @Override
         public void use() {
             System.out.println("Открыв холодильник ты плотно покушал и решил что работа подождёт уснув на диване.");
+            Game.isGameFinished = true;
         }
     }
 
@@ -50,6 +51,8 @@ public class Kitchen extends Room {
         @Override
         public void use() {
             System.out.println(text);
+            System.out.println("Вы выпругнули в окно... И побежали на работу. Вы ведь на первом этаже.");
+            Game.isGameFinished = true;
         }
     }
 

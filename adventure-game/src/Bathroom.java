@@ -25,14 +25,11 @@ public class Bathroom extends Room {
         }
     }
 
-    public class Towel extends Item implements Useful {
+    public class Towel extends Item {
         public Towel(String name, String description) {
             super(name, description);
         }
 
-        @Override
-        public void use() {
-        }
     }
 
     public class Note extends Item implements  Useful, Collectible{
@@ -47,13 +44,9 @@ public class Bathroom extends Room {
         }
     }
 
-    public class KremHair extends Item implements Useful {
+    public class KremHair extends Item {
         public KremHair(String name, String description) {
             super(name, description);
-        }
-
-        @Override
-        public void use() {
         }
     }
 

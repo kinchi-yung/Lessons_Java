@@ -34,6 +34,8 @@ public class Bedroom extends Room {
 
         @Override
         public void use() {
+            System.out.println("Вы вспомнили что сегодня выходной и вернулись ко сну!");
+            Game.isGameFinished = true;
         }
     }
 
@@ -44,6 +46,8 @@ public class Bedroom extends Room {
 
         @Override
         public void use() {
+            System.out.println("Вы кушали не торопяс и заметили что сегодня выходной!");
+            Game.isGameFinished = true;
         }
     }
 

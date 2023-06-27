@@ -116,6 +116,7 @@ public class Player {
 //    }
 
     private int getNextFreeInventorySlot() {
+        currentRoom.printItems();
         for (int i = 0; i < inventory.length; i++) {
             if (inventory[i] == null) {
                 return i;

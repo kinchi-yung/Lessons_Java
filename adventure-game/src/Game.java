@@ -63,18 +63,6 @@ public class Game {
     }
 
 
-
-//    public void printItems() {
-//
-//        if (items.length > 0) {
-//            for (Item s : items) {
-//                System.out.println("Предметы в комнате " + getRoomName() + ": " + s.getName());
-//                return;
-//            }
-//        } else {
-//            System.out.println("В комнате нет вещей");
-//        }
-//    }
     public static int showMenu() {
         System.out.println("2. Показать инвентарь.\n1. Перейти в другую комнату. \n0. Выход.");
         Scanner keyboard = new Scanner(System.in);
@@ -91,23 +79,6 @@ public class Game {
         int roomN = keyboard.nextInt();
         return roomN;
 
-//        switch(){
-//            case (0) ->{
-//
-//            }
-//            break;
-//            case (1) ->{
-//                Kitchen.printItems();
-//            }
-//            break;
-//            case (2) ->{
-//
-//            }
-//            break;
-//            case (3) ->{
-//            }
-//            break;
-//        }
     }
 
 }
